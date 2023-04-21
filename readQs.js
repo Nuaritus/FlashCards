@@ -5,7 +5,7 @@ const player = require("play-sound")((opts = {}));
 // выдавать вопрос и варианты ответов в красивом виде
 
 const numberQuis = readlineSync.question(
-  "\n\x1b[1m\x1b[35mВыберите тему:\n\n     \x1b[36m1. Валюты мира\n     \x1b[36m2. Во все тяжкие\n     \x1b[36m3. Теория большого взрыва\n\x1b[0m"
+  "\n\x1b[1m\x1b[35mВыберите тему:\n\n     \x1b[36m1. Валюты мира\n     \x1b[36m2. Во все тяжкие\n     \x1b[36m3. Теория большого взрыва\n     \x1b[36m4. Доктор Хаус\n     \x1b[36m5. Клан Сопрано\n     \x1b[36m6. Уровень сложно, интересные факты\n     \x1b[36m7. Факты о Санкт-Петербурге\x1b[0m\n"
 );
 console.log(
   "\n\x1b[1m\x1b[35mВы выбрали " + numberQuis + "-й квиз! Поехали!\n\x1b[0m"
@@ -43,3 +43,13 @@ async function readFile(number) {
 }
 
 readFile(numberQuis);
+// async function rR(number) {
+//   const fL = await fs.readdir("./quiz");
+//   // console.log(fL);
+//   if (number > 0 && number <= fL.length) {
+//     readFile(numberQuis);
+//   } else {
+//     console.log("Нет такой темы\n");
+//   }
+// }
+// rR();
